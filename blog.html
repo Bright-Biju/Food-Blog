@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FlavorVerse | Articles</title>
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Read More Styling */
+    .article-preview {
+      margin: 1.5rem auto;
+      max-width: 800px;
+      background-color: #fff3e0;
+      padding: 1rem 1.5rem;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    }
+
+    .article-preview h3 {
+      color: #e64a19;
+      margin-bottom: 0.5rem;
+    }
+
+    .read-more-content {
+      display: none;
+      margin-top: 0.5rem;
+      line-height: 1.6;
+    }
+
+    .read-more-link {
+      color: #ff7043;
+      text-decoration: none;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    .read-more-link:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="sub-header">
+    <h1>Articles & Insights</h1>
+    <p>Professional culinary tips and inspiration for food enthusiasts!</p>
+  </header>
+
+  <nav class="navbar">
+    <a href="index.html">Home</a>
+    <a href="gallery.html">Gallery</a>
+    <a href="tips.html">Cooking Tips</a>
+    <a href="blog.html" class="active">Articles</a>
+    <a href="contact.html">Contact</a>
+  </nav>
+
+  <section>
+    <!-- Article 1 -->
+    <div class="article-preview">
+      <h3>Culinary Techniques Every Home Cook Should Know</h3>
+      <p>Mastering basic cooking techniques can elevate your home-cooked meals... 
+        <span class="read-more-content">
+          Understanding methods like sautéing, roasting, steaming, and proper knife skills can transform everyday ingredients into restaurant-quality dishes. Learning these techniques also helps you experiment with flavors and textures confidently.
+        </span>
+      </p>
+      <a class="read-more-link" onclick="toggleReadMore(this)">Read More</a>
+    </div>
+
+    <!-- Article 2 -->
+    <div class="article-preview">
+      <h3>The Science of Flavor Pairing</h3>
+      <p>Creating balanced and memorable dishes is about understanding flavor combinations... 
+        <span class="read-more-content">
+          Sweet, salty, sour, bitter, and umami — knowing how to combine them is key to crafting delightful meals. Explore how herbs, spices, and ingredients complement or contrast with each other to produce complex, satisfying flavors.
+        </span>
+      </p>
+      <a class="read-more-link" onclick="toggleReadMore(this)">Read More</a>
+    </div>
+
+    <!-- Article 3 -->
+    <div class="article-preview">
+      <h3>Sustainable and Seasonal Cooking</h3>
+      <p>Eating seasonally isn’t just healthier, it’s also better for the environment... 
+        <span class="read-more-content">
+          Using fresh, seasonal ingredients reduces waste, supports local farmers, and ensures your meals are at their peak flavor. Learn tips for sourcing, storing, and cooking seasonal produce efficiently.
+        </span>
+      </p>
+      <a class="read-more-link" onclick="toggleReadMore(this)">Read More</a>
+    </div>
+
+    <!-- Article 4 -->
+    <div class="article-preview">
+      <h3>Plating and Presentation Tips for Home Cooks</h3>
+      <p>A visually appealing dish enhances the dining experience... 
+        <span class="read-more-content">
+          Learn simple tricks for plating, garnishing, and arranging food to make your meals look as good as they taste. Presentation techniques can turn an ordinary dish into an Instagram-worthy creation.
+        </span>
+      </p>
+      <a class="read-more-link" onclick="toggleReadMore(this)">Read More</a>
+    </div>
+  </section>
+
+  <footer>
+    <p>© 2025 FlavorVerse | Crafted with ❤️ by Food Lovers</p>
+  </footer>
+
+  <script>
+    function toggleReadMore(element) {
+      const content = element.previousElementSibling.querySelector('.read-more-content');
+      if (content.style.display === "inline") {
+        content.style.display = "none";
+        element.textContent = "Read More";
+      } else {
+        content.style.display = "inline";
+        element.textContent = "Show Less";
+      }
+    }
+  </script>
+</body>
+</html>
